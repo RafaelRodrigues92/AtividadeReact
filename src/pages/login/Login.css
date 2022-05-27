@@ -1,0 +1,11 @@
+.textos1{
+    font-weight: bold;
+}
+.text-decoration.none{
+    text-decoration: none;
+}
+.botao2{
+    border-color: white !important;
+    background-image: linear-gradient(to right, #126570, #5c2c6d);
+    color: white !important;
+}

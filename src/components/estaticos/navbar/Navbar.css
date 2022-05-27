@@ -1,0 +1,14 @@
+.cursor{
+    cursor: pointer;
+    color: white;
+}
+.text-decoration-none{
+    text-decoration: none;
+}
+
+.botao2{
+    color: white;
+}
+.MuiAppBar-colorPrimary{
+    background-image: linear-gradient(to right, #126570, #5c2c6d);
+    }

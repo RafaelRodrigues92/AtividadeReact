@@ -7,6 +7,9 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Box } from '@material-ui/core';
+import { Link } from 'react-router-dom'
+import './Navbar.css'
+
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -34,29 +37,33 @@ export default function ButtonAppBar() {
             BlogPessoal
           </IconButton>
           <Box display="flex" justifyContent="start">
-              <Box mx={1} style={{cursor: "pointer"}}>
+            <Link to='/home' className='text-decoration-none'>
+            <Box mx={1} className='cursor'>
               <Typography variant="h6" className={classes.title}>
                   Home
           </Typography>
               </Box>
-              <Box mx={1} style={{cursor: "pointer"}}>
+            </Link>
+              
+              <Box mx={1} className='cursor'>
               <Typography variant="h6" className={classes.title}>
               Postagens
           </Typography>
               </Box>
-              <Box mx={1} style={{cursor: "pointer"}}>
+              <Box mx={1} className='cursor'>
               <Typography variant="h6" className={classes.title}>
               Temas
           </Typography>
               </Box>
-              <Box mx={1} style={{cursor: "pointer"}}>
+              <Box mx={1} className='cursor'>
               <Typography variant="h6" className={classes.title}>
               Cadastrar Temas
           </Typography>
               </Box>
           </Box>
-          
-          <Button color="inherit">Loggout</Button>
+          <Link to='/login' className='text-decoration-none cursor'>
+          <Button color='inherit'>Loggout</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
