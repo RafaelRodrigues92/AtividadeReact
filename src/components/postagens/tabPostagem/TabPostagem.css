@@ -1,0 +1,16 @@
+.tituloSobre{
+    font-weight: bold !important;
+    
+ }
+ .appbar{
+    background-image: url(https://i.imgur.com/HADRLIf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 51.5%;
+    margin-top: 100px;
+ }
+ .sobre{
+    text-align: center;
+    margin: 0 100px;
+    
+ }

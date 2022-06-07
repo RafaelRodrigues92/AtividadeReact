@@ -9,6 +9,12 @@
 .botao2{
     color: white;
 }
-.MuiAppBar-colorPrimary{
-    background-image: linear-gradient(to right, #126570, #5c2c6d);
-    }
+.navbar{
+    background-image: url(https://i.imgur.com/HADRLIf.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 22.5% !important;
+    align-items: center;
+    font-weight: bold;
+    
+}
