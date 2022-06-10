@@ -7,13 +7,13 @@
 }
 
 .botao2{
-    color: white;
+    color: rgb(255, 255, 255);
 }
 .navbar{
-    background-image: url(https://i.imgur.com/HADRLIf.jpg) !important;
+    background-image: url(https://i.imgur.com/bpd2LUT.jpg) !important;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: 22.5% !important;
+    background-position-y: 20% !important;
     align-items: center;
     font-weight: bold;
     

@@ -8,6 +8,7 @@ import { buscaId, deleteId } from '../../../services/Service';
 
 import "./DeletarPostagem.css"
 import Postagem from '../../../models/Postagem';
+import {toast} from 'react-toastify'
 
 function DeletarPostagem() {
 
@@ -21,7 +22,16 @@ function DeletarPostagem() {
 
     useEffect(() => {
         if (token === "") {
-            alert("Você precisa estar logado")
+            toast.error('Você precisa estar logado!', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: "undefined"
+              });
             history("/login")
 
         }
@@ -51,11 +61,28 @@ function DeletarPostagem() {
                 }
             });
             
-            alert('Postagem deletada com sucesso');
-            
+            toast.success('Postagem deletada com sucesso!', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: "undefined"
+              });    
         } catch (error) {
-            alert('Erro ao deletar');
-        }
+            toast.error('Erro ao deletar postagem!', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: "undefined"
+              });
+            }
 
     }
 

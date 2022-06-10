@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { buscaId, post, put } from '../../../services/Service'
 import Tema from '../../../models/Tema'
+import { toast } from 'react-toastify';
 
 import "./CadastroTema.css"
 
@@ -23,8 +24,17 @@ function CadastroTema() {
 
     useEffect(() => {
         if (token === "") {
-            alert("Você precisa estar logado")
-            history("/login")
+            toast.error('Você precisa estar logado!', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: "undefined"
+              })
+              history("/login")
         }
     }, [token])
 
@@ -68,7 +78,16 @@ function CadastroTema() {
             // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
             } catch (error) {
                 console.log(`Error: ${error}`)
-                alert("Erro, por favor verifique a quantidade minima de caracteres")
+                toast.error('Erro, por favor verifique a quantidade minima de caracteres!', {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: "undefined"
+                  })
             }
 
         // Se o ID for indefinido, tente Cadastrar
@@ -82,12 +101,29 @@ function CadastroTema() {
                     }
                 })
                 
-                alert('Tema cadastrado com sucesso');
-            
+                toast.success('Tema cadastrado com sucesso!', {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: "undefined"
+                  })            
             // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
             } catch (error) {
                 console.log(`Error: ${error}`)
-                alert("Erro, por favor verifique a quantidade minima de caracteres")
+                toast.error('Erro, por favor verifique a quantidade minima de caracteres!', {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: "undefined"
+                  });
             }
         }
         

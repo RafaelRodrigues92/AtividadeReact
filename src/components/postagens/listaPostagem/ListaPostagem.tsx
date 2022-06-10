@@ -7,6 +7,7 @@ import './ListaPostagem.css';
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import {toast} from "react-toastify"
 
 function ListaPostagem() {
   const [postagens, setPostagens] = useState<Postagem[]>([])
@@ -17,8 +18,17 @@ function ListaPostagem() {
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado")
-      history("/login")
+      toast.error('Você precisa estar logado!', {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: "undefined"
+      })     
+        history("/login")
 
     }
   }, [token])
@@ -42,10 +52,10 @@ function ListaPostagem() {
       {
         postagens.map(postagem => (
           <Box m={2} >
-            <Card variant="outlined">
+            <Card variant="outlined" className="postagem">
               <CardContent>
                 <Typography color="textSecondary" gutterBottom>
-                  Postagens
+                  <img src="https://i.imgur.com/a5hDdnh.jpg" width={400} alt="" />
                 </Typography>
                 <Typography variant="h5" component="h2">
                   {postagem.titulo}
@@ -61,7 +71,7 @@ function ListaPostagem() {
                 <Box display="flex" justifyContent="center" mb={1.5}>
 
                   <Link to={`/formularioPostagem/${postagem.id}`} className="text-decorator-none" >
-                    <Box mx={1}>
+                    <Box mx={1} className='bntListPost' >
                       <Button variant="contained" className="marginLeft" size='small' color="primary" >
                         atualizar
                       </Button>

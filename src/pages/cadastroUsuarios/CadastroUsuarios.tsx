@@ -1,8 +1,9 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Grid, Typography, TextField, Box, Button } from '@material-ui/core';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { cadastro } from '../../services/Service';
 import User from '../../models/User';
+import { toast } from 'react-toastify';
 
 import './CadastroUsuarios.css'
 
@@ -49,12 +50,29 @@ function CadastroUsuarios() {
 
             try {
                 await cadastro(`/usuarios/cadastrar`, user, setUserResult)
-                alert("Usuário cadastrado com sucesso")
-
+                toast.success('Usuario cadastrado com sucesso!', {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: "undefined"
+                  });                   
             } catch (error) {
                 console.log(`Error: ${error}`)
-                alert("Usuário já existente")
-            }
+                toast.error('Usuario já existente!', {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: "undefined"
+                  });
+                }
 
         } else {
             alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
