@@ -16,8 +16,8 @@ function DeletarPostagem() {
 
     const { id } = useParams<{ id: string }>();
 
-    const [token, setToken] = useLocalStorage('token');
-
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens);
     const [postagem, setPostagem] = useState<Postagem>()
 
     useEffect(() => {
