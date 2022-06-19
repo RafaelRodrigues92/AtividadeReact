@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Postagem from '../../../models/Postagem';
 import { busca } from '../../../services/Service'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
 import './ListaPostagem.css';
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
@@ -51,9 +51,11 @@ function ListaPostagem() {
     <>
       {
         postagens.map(postagem => (
-          <Box m={2} >
-            <Card variant="outlined" className="postagem">
-              <CardContent>
+          <Grid className='gridpostagem'>
+
+          <Box m={2} className='boxpostagem' >
+            <Card variant="outlined">
+              <CardContent className="postagem">
                 <Typography color="textSecondary" gutterBottom>
                   <img src="https://i.imgur.com/a5hDdnh.jpg" width={400} alt="" />
                 </Typography>
@@ -88,6 +90,7 @@ function ListaPostagem() {
               </CardActions>
             </Card>
           </Box>
+          </Grid>
         ))
       }
     </>

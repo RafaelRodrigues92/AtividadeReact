@@ -7,13 +7,13 @@
 }
 
 .botao2{
-    color: rgb(255, 255, 255);
+    color: #fff;
 }
 .navbar{
-    background-image: url(https://i.imgur.com/bpd2LUT.jpg) !important;
+    background-image: url(https://i.imgur.com/0jHGSyf.jpg) !important;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: 20% !important;
+    background-position-y: 10.5% !important;
     align-items: center;
     font-weight: bold;
     

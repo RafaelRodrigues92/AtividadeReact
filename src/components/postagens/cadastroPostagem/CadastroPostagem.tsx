@@ -1,12 +1,12 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import { Button, Container, FormControl, FormHelperText, InputLabel, MenuItem, Select, TextField, Typography } from '@material-ui/core'
+import { Button, Container, FormControl, FormHelperText, InputLabel, MenuItem, Box, Select, TextField, Typography, Grid } from '@material-ui/core'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import Tema from '../../../models/Tema'
 import Postagem from '../../../models/Postagem'
-import {toast} from 'react-toastify'
+import { toast } from 'react-toastify'
 
 import './CadastroPostagem.css'
 
@@ -42,8 +42,8 @@ function CadastroPostagem() {
                 draggable: false,
                 theme: "colored",
                 progress: "undefined"
-              });
-              history("/login")
+            });
+            history("/login")
         }
     }, [token])
 
@@ -104,7 +104,7 @@ function CadastroPostagem() {
                 draggable: false,
                 theme: "colored",
                 progress: "undefined"
-              });
+            });
         } else {
 
             await post(`/postagens`, postagem, setPostagem, {
@@ -121,7 +121,7 @@ function CadastroPostagem() {
                 draggable: false,
                 theme: "colored",
                 progress: "undefined"
-              });
+            });
         }
         back()
     }
@@ -131,7 +131,7 @@ function CadastroPostagem() {
     }
 
     return (
-        <Container maxWidth="sm" className="topo">
+        <Container maxWidth="sm" className='flex'>
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro postagem</Typography>
 
@@ -175,8 +175,9 @@ function CadastroPostagem() {
                         Finalizar
                     </Button>
                 </FormControl>
-            </form>
+            </form>        
         </Container>
+
     )
 }
 

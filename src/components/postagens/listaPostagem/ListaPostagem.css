@@ -3,4 +3,13 @@
 }
 .postagem{
     text-align: center !important;
+
+}
+ .MuiCardActions-root{
+    display: block !important;
+}
+.gridpostagem{
+    display: flex;
+    flex-wrap: wrap;
+    
 }

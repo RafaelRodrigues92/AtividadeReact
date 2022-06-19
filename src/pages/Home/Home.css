@@ -1,10 +1,13 @@
 .caixa{
-    background-image: url(https://i.imgur.com/xFtZMLg.jpg) ;
+    background-image: url(https://i.imgur.com/0jHGSyf.jpg) ;
     background-repeat: no-repeat;
     width: 100%;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
+}
+caixa2{
+    background-color: black;
 }
 
 .bemvindo{
@@ -20,24 +23,17 @@
     border-color: white !important;
     color: white !important;
     font-weight: bold !important;
+;
 }
 
 .postagens{
-    background-color: rgba(108, 104, 104, 0.407) !important;
+    background-color: rgba(108, 104, 104, 0.479) !important;
     border-radius: 10px;
 }
 .text-decorator-none{
     text-decoration: none;
 }
-
 .MuiCard-root{
-    max-width: 500px;
-    max-height: 600px;
+    max-width: 450px !important;
+    max-height: 850px !important;
 }
-.MuiCardContent-root{
-    max-width: 700x ;
-    max-height: 800px;
- }
- .MuiCardActions-root{
-    display: block !important;
- }

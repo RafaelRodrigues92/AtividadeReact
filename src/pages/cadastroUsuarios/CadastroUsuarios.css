@@ -1,11 +1,26 @@
-.imagem2{
-    background-image: url(https://i.imgur.com/agyvngD.jpg);
+.gridprincadastro{
+    background-image: url(https://i.imgur.com/cQ1kylh.jpg);
     background-repeat: no-repeat;
-    width: 100vh;
+    width: 100%;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
 }
+
+
+.gridcadastro{
+    display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.formcadastro{
+    background: #ffffffd2;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    padding: 25px;
+    width: 500px;  
+}
+
 .textos2{
     font-weight: bold !important;
 }
